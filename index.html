@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Hogwarts Lunch Order Form</title>
+    <style> 
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0; 
+        color: white;
+        line-height: 1.2;
+        background-color: rgb(223, 188, 102);
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: flex; 
+        align-items: left; 
+    }
+
+    form {
+        display: inline-block; 
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;  
+        padding: 10px; 
+        background-color: rgb(104, 16, 16);
+        text-align: left;
+        
+    }
+
+    .form-group {
+        margin-bottom: 20px; 
+        text-align: left;
+    } 
+
+    #dobby {
+        max-width: 200px;
+        max-height: auto;
+
+    }
+
+    #name, #email {
+        width: 90%;
+        margin: 10px auto 10px auto
+    }
+
+    #number {
+        width: 20%
+    }
+
+    textarea {
+        min-height: 100px;
+        width: 100%;
+    }
+
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Hogwarts Lunch Order Form</h1>
+
+    <img id="dobby" src="https://www.hp-lexicon.org/wp-content/uploads/2016/09/dobby-the-house-elf.jpg">
+
+    <h2 id="description">Please order your lunch by 10AM daily in order for prompt delivery.</h2>
+
+    <form id="survey-form">
+        <div class="form-group">
+            <label for="name" id="name-label">Name</label> 
+            <input id="name" type="text" placeholder="Enter your Name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email" id="email-label">Email</label> 
+            <input id="email" type="email" placeholder ="Enter your Email" required> 
+        </div>
+
+        <div class="form-group">
+            <label for="number" id="number-label" min="1" max="10">How many sandwiches?</label>  
+            <input id="number" type="number" placeholder="1-10"> 
+        </div>
+
+        <div class="form-group">
+            <label for="bread" id="bread-label">What type of bread?</label> 
+            <select name="bread" id="dropdown">
+                <option value="white">White</option>
+                <option value="wheat">Whole Wheat</option>
+                <option value="honey-wheat">Honey Wheat</option>
+                <option value="pumpernickel">Pumpernickel</option>
+                <option value="sourdough">Sourdough</option>
+                <option value="asiago">Asiago</option>
+                <option value="hoagie">Hoagie</option>
+                <option value="ciabatta">Ciabatta</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="protein" id="protein-label">Protein (choose one)</label> 
+            <label for="tofu"><input id="tofu" type="radio" name="protein">Tofu</label>
+            <label for="chicken"><input id="chicken" type="radio" name="protein">Chicken</label>
+            <label for="turkey"><input id="turkey" type="radio" name="protein">Turkey</label>
+            <label for="bacon"><input id="bacon" type="radio" name="protein">Bacon</label>
+        </div>
+
+        <div class="form-group">
+            <label for="filling" id="filling-label">Fillings (can click multiple)</label>
+            <label for="lettuce"><input id="lettuce" type="checkbox" name="filling">Lettuce</label>
+            <label for="tomato"><input id="tomato" type="checkbox" name="filling">Tomato</label>
+            <label for="pickles"><input id="pickles" type="checkbox" name="filling">Pickles</label>
+            <label for="jalapeños"><input id="jalapeños" type="checkbox" name="filling">Jalapeños</label>
+            <label for="pepperjack-cheese"><input id="pepperjack-cheese" type="checkbox" name="filling">Pepperjack cheese</label>
+        </div>
+
+        <div class="form-group">
+            <label for="condiments" id="condiments-label">Condiments (can click multiple)</label> 
+            <label for="mustard"><input id="mustard" type="checkbox" name="condiments">Mustard</label>
+            <label for="mayo"><input id="mayo" type="checkbox" name="condiments">Mayo</label>
+            <label for="pesto"><input id="pesto" type="checkbox" name="condiments">Pesto</label>
+            <label for="ranch"><input id="ranch" type="checkbox" name="condiments">Ranch</label>
+        </div>
+
+        <div class="form-group">
+            <label for="requests">Special requests (may not be able to accommodate)</label> 
+            <textarea id="requests" placeholder="Enter any special requests or instructions here"></textarea>
+        </div>
+
+        <button type="submit">SUBMIT</button>
+
+    </form>
+
+</body>
+</html>
